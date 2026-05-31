@@ -1,30 +1,112 @@
-.container .features-list {
+.features__list {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 72px;
 }
-.decoration {
-  background: #f4f4fd;
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
-  width: 264px;
-  height: 112px;
-  position: relative;
+
+.features__item {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 8px;
 }
-.decoration-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+
 .features-title {
-  margin: 8px 0;
+  color: var(--navy-blue-modal);
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
 }
+
+.features .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.icon-container {
+  display: none;
+}
+
 .features-description {
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #434455;
+  color: var(--slate);
 }
-.features-item {
-  width: 264px;
+
+@media (min-width: 768px) {
+  .features-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    text-align: start;
+  }
+
+  .features__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+
+  .features__item {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .features-description {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: 1158px) {
+  .features-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .features__list {
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+
+  .features__item {
+    width: calc((100% - 72px) / 4);
+  }
+
+  .features .container {
+    width: 1158px;
+  }
+
+  .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 0px;
+    border: 1px solid var(--light-slate);
+    border-radius: 4px;
+    height: 112px;
+    width: 100%;
+    background-color: var(--cloud);
+  }
+
+  .features-title {
+    text-align: left;
+  }
+
+  .features-description {
+    font-weight: 400;
+  }
 }
