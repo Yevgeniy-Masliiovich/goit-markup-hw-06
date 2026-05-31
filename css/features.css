@@ -1,0 +1,30 @@
+.container .features-list {
+  display: flex;
+  gap: 24px;
+}
+.decoration {
+  background: #f4f4fd;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  width: 264px;
+  height: 112px;
+  position: relative;
+}
+.decoration-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.features-title {
+  margin: 8px 0;
+}
+.features-description {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+.features-item {
+  width: 264px;
+}
